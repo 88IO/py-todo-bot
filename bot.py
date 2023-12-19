@@ -60,7 +60,7 @@ async def list(ctx):
     result = cur.fetchall()
     content = f'You have {len(result)} pending tasks:\n'
     for i, c in enumerate(result):
-        content += f'{i}. {c}\n'
+        content += f'{i}. {c[0]}\n'
     await ctx.send(content)
 
 
